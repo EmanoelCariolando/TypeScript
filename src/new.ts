@@ -27,7 +27,7 @@
   });
 
 
-  function takeInfo(user: {name: string, age?: number}){
+  function takeInfo(user: {name: string, age?: number}){ //  to "?" serves to leave the property as optional
 
         if(user.age !== undefined){
         return `seu nome é ${user.name} e você tem ${user.age} anos`
@@ -41,3 +41,15 @@
         age: 25
   }
   console.log(takeInfo(persona))
+
+
+  function showNumber(newAge: Newtype){ //  to "|" serves to leave the property as optional
+      if(typeof newAge === 'string'){
+      console.log(showNumber(newAge.toUpperCase()));
+   }
+  };
+
+ showNumber(10)
+ showNumber('10')
+
+ type Newtype = number | string
