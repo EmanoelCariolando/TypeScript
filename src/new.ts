@@ -43,7 +43,10 @@
   console.log(takeInfo(persona))
 
 
-  function showNumber(newAge: Newtype){ //  to "|" serves to leave the property as optional
+  //------------------ make one type -----------------\\
+
+
+  function showNumber(newAge: Newtype /* NewInterface can also be used */ ){ //  to "|" serves to leave the property as optional
       if(typeof newAge === 'string'){
       console.log(showNumber(newAge.toUpperCase()));
    }
@@ -53,3 +56,29 @@
  showNumber('10')
 
  type Newtype = number | string
+
+ interface NewInterface {
+      name: string
+ }
+
+ //interface can also be used as an adder, diferent from type.
+
+ interface NewInterface {
+      age: number
+ }
+
+
+
+  let input = document.querySelector('#one') as HTMLInputElement // to use the input, it is necessary to use the "as HTMLInputElement"
+  console.log(input.value)
+
+ // others
+
+  type directions = 'left' | 'right' | 'up' | 'down' // type to use in the function
+
+  function takeDirection(text: string, direction: directions){
+      
+  return input.innerHTML = `<div>${text} ${direction}</div>`
+ 
+  }
+  takeDirection('texto', "right")
