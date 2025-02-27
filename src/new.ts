@@ -98,3 +98,19 @@
   let method: methods = 'GET';
   makeRequisition('https://api.example.com/data', 'GET')
   
+// others --------------------
+
+  type maths = (n1:number, n2:number ) => number; // type to use in the function
+
+  const sum: maths = (n1, n2) =>{
+   return n1 + n2
+  }
+  const subtract: maths = (n1, n2) =>{
+      return n1 - n2
+     }
+  const multiplication: maths = (n1, n2) =>{
+   return n1 * n2
+  }
+  const division: maths = (n1, n2) =>{
+      return n1 / n2
+     }
