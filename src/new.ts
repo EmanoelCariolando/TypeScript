@@ -72,7 +72,7 @@
   let input = document.querySelector('#one') as HTMLInputElement // to use the input, it is necessary to use the "as HTMLInputElement"
   console.log(input.value)
 
- // others
+ // others ----------------------
 
   type directions = 'left' | 'right' | 'up' | 'down' // type to use in the function
 
@@ -82,3 +82,19 @@
  
   }
   takeDirection('texto', "right")
+
+ // others ----------------------
+  
+
+  type Firstmethods = 'GET' | 'POST' // type to use in the function
+  function makeRequisition(url: string, method: Firstmethods){
+      //...........
+ }
+
+  type methods = 'GET' | 'POST';
+ 
+
+  let url = 'http://localhost:3000/data'
+  let method: methods = 'GET';
+  makeRequisition('https://api.example.com/data', 'GET')
+  
